@@ -1,0 +1,25 @@
+<h3>
+<center>
+
+
+<pre> 
+
+<h2> Below are your Results</h2>
+Testing Linear SVC values using Split
+0.549180327869
+Score without any split
+0.808580858086
+The prediction is as follows:
+ Likelihood of belonging to Class 0 is 0.788778877888
+ Likelihood of belonging to Class 1 is 0.016501650165
+ Likelihood of belonging to Class 2 is 0.0528052805281
+ Likelihood of belonging to Class 3 is 0.141914191419
+ Likelihood of belonging to Class 4 is 0.0
+Testing with RBF using split
+0.491803278689
+RBF Score without split
+1.0
+Testing using stratified with K folds
+0.542372881356
+Stratified K Fold score on X_New
+1.0</pre></center></h3>
