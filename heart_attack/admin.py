@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import storedata
+from .models import *
 
-admin.site.register(storedata)
+admin.site.register(Storedata)
+admin.site.register(Tempstorage)

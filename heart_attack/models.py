@@ -1,8 +1,7 @@
 from django.db import models
 
-
-
-class storedata(models.Model):
+class Storedata(models.Model):
+    fullname = models.CharField(max_length = 250)
     age = models.IntegerField()
     sex = models.IntegerField()
     cp_type = models.IntegerField()
@@ -13,7 +12,13 @@ class storedata(models.Model):
     thalch = models.IntegerField()
     eia = models.IntegerField()
     oldpeak = models.FloatField()
-    slpe = models.IntegerField()
+    slope = models.IntegerField()
     ca = models.IntegerField()
     thal = models.IntegerField()
-    ads = models.IntegerField()
+
+
+
+
+class Tempstorage(models.Model):
+    name = models.CharField(max_length = 200)
+    age = models.IntegerField()

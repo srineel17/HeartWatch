@@ -5,6 +5,6 @@ app_name = 'heart_attack'
 
 urlpatterns = [
     url(r'^$', views.index, name ='index'),
-	 url(r'^insertuser/$',views.insertuser, name='insertuser')
-	
+	url(r'^insert_user/$',views.insert_user, name='insert_user'),
+    url(r'^result/$',views.result, name='result'),
 ]

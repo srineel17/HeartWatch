@@ -1,0 +1,201 @@
+
+
+  <form class="form-horizontal" id="form_template" method="post" action ="\insert_user\">
+  {% csrf_token %}
+    <h2 class="text-center" style="color: #199EB8;
+    margin-bottom: 25px;padding-top:25px">Get Started</h2>
+
+    <div class="form-group">
+        <div class="row">
+            <label class="control-label col-sm-3"><center><b>Age:</b></center></label>
+            <div class="col-sm-9">
+                <input type="number" class="form-control" id="age" placeholder="Age in Years" name="age">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <label class="control-label col-sm-3" for="pwd"><center><b>Sex:</b></center></label><br>
+            <div class="col-sm-9">
+                <label class="radio-inline">
+                    <input type="radio" name="sex" value="1">Male
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="sex" value="0">Female
+                  </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-3"><center>
+        <label class="control-label" for="pwd"><b>Chest Pain Type:</b></label><br>
+        <p style="font-size:12px"><b>Description:</b> <br>Value 1: typical angina <br> Value 2: atypical angina <br> Value 3: non-anginal pain <br> Value 4: asymptomatic</p></center>
+      </div>
+      <div class="col-sm-9">
+        <input type="number" class="form-control" id="cp_type" name="cp_type" onblur="cpvalidate()" placeholder="" >
+      </div>
+      </div>
+    </div>
+    <center><p id="cpmsg" class="text-danger"></p></center>
+
+    <div class="form-group">
+      <div class="row">
+        <label class="control-label col-sm-3"><center><b>Trestbps:</b></center></label>
+        <div class="col-sm-9">
+            <input type="" class="form-control" id="trest_bps" placeholder="Resting blood pressure (in mm Hg on admission to the hospital) " name="trest_bps">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <label class="control-label col-sm-3"><center><b>Cholesterol:</b></center></label>
+        <div class="col-sm-9">
+          <input type="" class="form-control" id="chol" placeholder="Serum cholestoral in mg/dl " name="chol">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+          
+            <label class="control-label col-sm-3" ><center><b>Fasting Blood Sugar:</b></center></label><br>
+            <div class="col-sm-9">
+                <label class="radio-inline">
+                    <input type="radio" name="fbs" value="1">True
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="fbs" value="0">False
+                  </label>
+           
+        </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-3"><center>
+        <label class="control-label" for="pwd"><b>Resting Electrocardiographic Results:</b></label><br>
+        <p style="font-size:12px"><b>Description:</b> <br>Value 0: normal <br>Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV) <br> Value 2: showing probable or definite left ventricular hypertrophy by Estes' criteria</p></center>
+      </div>
+      <div class="col-sm-9">
+                <label class="radio-inline">
+                    <input type="radio" name="rer" value="0"> 0
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="rer" value="1"> 1
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="rer" value="2"> 2
+                  </label>
+            </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <label class="control-label col-sm-3"><center><b>Thalch:</b></center></label>
+        <div class="col-sm-9">
+          <input type="" class="form-control" id="thalch" name="thalch" placeholder="Maximum heart rate achieved" >
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <label class="control-label col-sm-3" for="pwd"><center><b>Exercise Induced Angina:</b></center></label><br>
+            <div class="col-sm-9">
+                <label class="radio-inline">
+                    <input type="radio" name="eia" value="1">Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="eia" value="0">No
+                  </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <label class="control-label col-sm-3"><center><b>Oldpeak:</b></center></label>
+        <div class="col-sm-9">
+          <input type="" class="form-control" id="oldpeak" name="oldpeak" placeholder="ST depression induced by exercise relative to rest " >
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-3"><center>
+        <label class="control-label" for="pwd"><b>Slope:</b></label><br>
+        <p style="font-size:12px"><b>Description:</b> <br>The slope of the peak exercise ST segment <br>Value 1: upsloping <br>  Value 2: flat <br> Value 3: downsloping</p></center>
+      </div>
+      <div class="col-sm-9">
+        <label class="radio-inline">
+                    <input type="radio" name="slope" value="1"> 1
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="slope" value="2"> 2
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="slope" value="3"> 3
+                  </label>
+      </div>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <div class="row">
+        <label class="control-label col-sm-3"><center><b>CA:</b></center></label>
+        <div class="col-sm-9">
+          <input type="" class="form-control" id="ca" name="ca" onblur="cavalidate()" placeholder="Number of major vessels (0-3) colored by flourosopy" >
+        </div>
+      </div>
+    </div>
+    <center><p id="camsg" class="text-danger"></p></center>
+
+    <div class="form-group">
+        <div class="row">
+          <div class="col-sm-3"><center>
+            <label class="control-label" for="pwd"><b>Thal:</b></label><br>
+        <p style="font-size:12px"><b>Description:</b> <br>3 = normal <br> 6 = fixed defect <br> 7 = reversable defect </p></center>
+          </div>
+            <div class="col-sm-9">
+                <label class="radio-inline">
+                    <input type="radio" name="thal" value="3" > 3
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="thal" value="6"> 6
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="thal" value="7"> 7
+                  </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+          <div class="col-sm-3"><center>
+            <label class="control-label" for="pwd"><b>Angiographic Disease Status:</b></label><br>
+        <p style="font-size:12px"><b>Description:</b> <br>Value 0: < 50% diameter narrowing <br>Value 1: > 50% diameter narrowing </p></center>
+          </div>
+            <div class="col-sm-9">
+                <label class="radio-inline">
+                    <input type="radio" name="ads" value="0"> 0
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="ads" value="1"> 1
+                  </label>
+            </div>
+        </div>
+    </div>
+
+    <center><button class="btn btn-default" type="submit" style="margin-bottom:25px">Submit</button></center>
+
+  </form>
+
+
+
